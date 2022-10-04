@@ -9,6 +9,7 @@ load_dotenv()
 # Initail Bot ## command_prefix 呼叫bot的時候要用的特殊字串
 # Intents中記錄了對應的事件和啟用的緩存類型，訂閱特定事件
 '''
+https://discordpy.readthedocs.io/en/latest/api.html#discord.Intents
 ## default
 intents = discord.Intents.default()
 intents.typing = False
@@ -17,7 +18,7 @@ intents.member要另外設定啟用
 
 ## 自行設定
 intents = discord.Intents(message = True, guild = True)
-if you want reaction events enaable the following:
+if you want reaction events enable the following:
 intents.reaction = True
 '''
 intents=discord.Intents.all()
@@ -44,4 +45,5 @@ async def on_member_remove(member):
     print(f'{member} BYE!')
     await channel.send(f'{member} BYE!')
 
+# 啟動Bot
 bot.run(os.getenv('bot_token')) 
