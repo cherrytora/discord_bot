@@ -14,7 +14,7 @@
 
 ### 設定
 1. 到[discord developers](https://discord.com/developers/applications) New Application => create => 點選側邊欄 Bot => add Bot
-2. 前往「OAuth2」， 在「SCOPES」中點選 bot，選擇權限後把下方連結複製到瀏覽器，就可以將機器人邀請進去你自己的伺服器！詳細的步驟[這邊](https://hackmd.io/@kangjw/Discordpy%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%BE%9E0%E5%88%B01%E8%B6%85%E8%A9%B3%E7%B4%B0%E6%95%99%E5%AD%B8))有
+2. 前往「OAuth2」， 在「SCOPES」中點選 bot，選擇權限後把下方連結複製到瀏覽器，就可以將機器人邀請進去你自己的伺服器！詳細的步驟[這邊](https://hackmd.io/@kangjw/Discordpy%E6%A9%9F%E5%99%A8%E4%BA%BA%E5%BE%9E0%E5%88%B01%E8%B6%85%E8%A9%B3%E7%B4%B0%E6%95%99%E5%AD%B8)有
 3. 新環境記得要安裝discord套件
 ```
 python -m pip install -U discord.py
@@ -63,7 +63,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 接下來就要開始建置Bot的功能了！
 
 ### 功能設置
-1. [成員加入/離開](members.md)
+1. [成員加入/離開](Docs/members.md)
 2. 鸚鵡機器人 & 傳送圖片
 3. 連結錢包、讀取特定NFT properties加入特定頻道 - https://collabland.freshdesk.com/support/home
 4. 還沒想到.....

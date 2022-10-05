@@ -25,3 +25,5 @@ async def on_member_join(member):
 ![](image/terminal_msg.png)
 - 到頻道去看有沒有成功讓Bot說話
 ![](image/channel_msg.png)
+
+Back to [README](../README.md)
