@@ -63,7 +63,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 接下來就要開始建置Bot的功能了！
 
 ### 功能設置
-1. 成員加入/離開
+1. [成員加入/離開](members.md)
 2. 鸚鵡機器人 & 成員加入/離開
 3. 連結錢包、讀取特定NFT properties加入特定頻道 - https://collabland.freshdesk.com/support/home
 4. 還沒想到.....
