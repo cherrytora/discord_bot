@@ -26,11 +26,7 @@ python -m pip install -U discord.py
     - 在discord的使用者設定（discord帳號，不是developers喔！） => 進階 => 開發者模式打開，這樣才能複製頻道ID
     ![](image/developer_mode.png)
 
-
-下面還在努力填內容中.....
-
-### 功能設定 
-#### 1. Initial
+### Initial BOT
 - [discord.Intents API](https://discordpy.readthedocs.io/en/latest/api.html#discord.Intents)    
 - Intents 可以理解成權限設定，一共有三個分類
 ```python
@@ -66,42 +62,13 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 ```
 接下來就要開始建置Bot的功能了！
 
-#### 2. 成員加入/離開 [CODE](get_start.py)
-- [Discord API members](https://discordpy.readthedocs.io/en/latest/api.html?highlight=on_ready#members)
-這邊使用兩個function，Members還有其他的功能，需要的人可以去上面Discord API members的連結看喔！
-    1. `on_member_join` 當有成員加入的時候歡迎他
-    2. `on_member_remove` 當有成員退出的時候跟他說掰掰
-- 去頻道按右鍵 => 複製ID，就可以設定channel ID，讓機器人傳訊息到特定的channel
-![](image/copy_channel_ID.png)
+### 功能設置
+1. 成員加入/離開
+2. 鸚鵡機器人 & 成員加入/離開
+3. 連結錢包、讀取特定NFT properties加入特定頻道 - https://collabland.freshdesk.com/support/home
+4. 還沒想到.....
 
-```python
-# get_start.py
-
-@bot.event ##調用 event 函式庫
-# 成員加入時
-async def on_member_join(member):
-    # member參數會去讀取跟member有關的訊息
-    channel = bot.get_channel(1026139400796639297)#這裡放剛剛複製的channel ID
-    print(f'{member} JOIN!') # 在terminal印出歡迎訊息
-    await channel.send(f'{member} JOIN!') # 在Discord channel中送出歡迎訊息
-```
-- terminal中的訊息
-![](image/terminal_msg.png)
-- 到頻道去看有沒有成功讓Bot說話
-![](image/channel_msg.png)
-
-#### 3. 鸚鵡機器人
-
-#### 4. 傳送圖片
-
-#### 5. 連結錢包、讀取特定NFT properties加入特定頻道
-https://collabland.freshdesk.com/support/home
-
-#### 6. 還沒想到.....
-
-
-
-#### Final Step
+### Final
 所有功能都建置好之後加上`bot.run('你的Bot Token')`去啟動寫好的Bot
 
 
