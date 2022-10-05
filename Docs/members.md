@@ -3,7 +3,7 @@
 ### 參考資料
 1. [Discord API members](https://discordpy.readthedocs.io/en/latest/api.html?highlight=on_ready#members)
 
-## 成員加入/離開 [CODE](Code/get_start.py)
+## 成員加入/離開 [CODE](../Code/get_start.py)
 - 這邊使用兩個function，Members還有其他的功能，需要的人可以去上面Discord API members的連結看喔！
     1. `on_member_join` 當有成員加入的時候歡迎他
     2. `on_member_remove` 當有成員退出的時候跟他說掰掰
