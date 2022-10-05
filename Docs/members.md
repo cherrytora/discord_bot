@@ -22,8 +22,8 @@ async def on_member_join(member):
     await channel.send(f'{member} JOIN!') # 在Discord channel中送出歡迎訊息
 ```
 - terminal中的訊息
-![](image/terminal_msg.png)
+![](../image/terminal_msg.png)
 - 到頻道去看有沒有成功讓Bot說話
-![](image/channel_msg.png)
+![](../image/channel_msg.png)
 
 Back to [README](../README.md)
