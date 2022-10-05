@@ -29,38 +29,80 @@ python -m pip install -U discord.py
 
 下面還在努力填內容中.....
 
-### Intents
-
 ### 功能設定 
 #### 1. Initial
+- [discord.Intents API](https://discordpy.readthedocs.io/en/latest/api.html#discord.Intents)    
+- Intents 可以理解成權限設定，一共有三個分類
 ```python
-async def on_ready():
-    print('目前登入身份：', bot.user)
-# 也可以用 on_connect()
+# 開啟所有的權限
+intents = discord.Intents.all()
+
+# 開啟預設的權限
+# 預設的部分是除了presences、members和message_content以外的都有
+intents = discord.Intents.default()
+
+# 所有的權限都不開啟
+intents = discord.Intents.none()
 ```
-整個code的最下面記得要把bot啟動喔！
+當然，也可以自行設定
 ```python
-bot.run('Bot Token') 
+# 自行定義要開啟的權限
+intents = discord.Intents(message = True, guild = True)
+# 另外把reaction打開
+intents.reaction = True
 ```
+或是這樣
+```python
+# 或是在設定好的權限下做調整等等
+intents = discord.Intents.default()
+# 在default下，把typing和preence關起來
+intents.typing = False
+intents.preence = False
+```  
+- 設定完intents後就可以設定Bot了！
+```python
+# command_prefix是呼叫bot的時候要用的特殊字串
+bot = commands.Bot(command_prefix="?", intents=intents)
+```
+接下來就要開始建置Bot的功能了！
+
 #### 2. 成員加入/離開 [CODE](get_start.py)
 - [Discord API members](https://discordpy.readthedocs.io/en/latest/api.html?highlight=on_ready#members)
+這邊使用兩個function，Members還有其他的功能，需要的人可以去上面Discord API members的連結看喔！
+    1. `on_member_join` 當有成員加入的時候歡迎他
+    2. `on_member_remove` 當有成員退出的時候跟他說掰掰
+- 去頻道按右鍵 => 複製ID，就可以設定channel ID，讓機器人傳訊息到特定的channel
+![](image/copy_channel_ID.png)
+
 ```python
+# get_start.py
 
+@bot.event ##調用 event 函式庫
+# 成員加入時
+async def on_member_join(member):
+    # member參數會去讀取跟member有關的訊息
+    channel = bot.get_channel(1026139400796639297)#這裡放剛剛複製的channel ID
+    print(f'{member} JOIN!') # 在terminal印出歡迎訊息
+    await channel.send(f'{member} JOIN!') # 在Discord channel中送出歡迎訊息
 ```
-
-
-- 先看terminal
+- terminal中的訊息
 ![](image/terminal_msg.png)
-- 回到頻道去看Bot有沒有說話
+- 到頻道去看有沒有成功讓Bot說話
 ![](image/channel_msg.png)
-
-這樣就是成功了！
 
 #### 3. 鸚鵡機器人
 
 #### 4. 傳送圖片
 
-#### 5. ......
+#### 5. 連結錢包、讀取特定NFT properties加入特定頻道
+https://collabland.freshdesk.com/support/home
+
+#### 6. 還沒想到.....
+
+
+
+#### Final Step
+所有功能都建置好之後加上`bot.run('你的Bot Token')`去啟動寫好的Bot
 
 
 
