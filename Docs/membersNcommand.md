@@ -43,9 +43,9 @@ async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000,2)} (ms)')
     #bot.latency指的是延遲時間
 ```
-- 在#一般頻道中的機器人回覆
+- 在#一般頻道中的機器人回覆 \
 ![](../image/command_ping1.png)
-- 轉到#test_1頻道中，機器人也會自動回覆在#test_1中喔！
+- 轉到#test_1頻道中，機器人也會自動回覆在#test_1中喔！\
 ![](../image/command_ping2.png)
 
 Back to [README](../README.md)
