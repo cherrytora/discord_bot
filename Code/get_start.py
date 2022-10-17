@@ -34,5 +34,12 @@ async def on_member_remove(member):
     print(f'{member} BYE!')
     await channel.send(f'{member} BYE!')
 
+# 指令 command
+@bot.command()
+async def ping(ctx):
+    # 1000ms = 1s
+    await ctx.send(f'{round(bot.latency*1000,2)} (ms)')
+    #bot.latency指的是延遲時間
+
 # 啟動Bot
 bot.run(os.getenv('bot_token')) 
