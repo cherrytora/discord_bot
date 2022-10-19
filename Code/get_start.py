@@ -41,5 +41,32 @@ async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000,2)} (ms)')
     #bot.latency指的是延遲時間
 
+# 傳送本機端圖片
+@bot.command()
+async def pict(ctx):
+    pic_path = discord.File('../image/channel_msg.png')
+    await ctx.send(file = pic_path)
+
+# 隨機傳送本機圖片
+import random
+pic_files = os.listdir('../image')
+@bot.command()
+async def r_pict(ctx):
+    r_pic = random.choice(pic_files)
+    pic_path = discord.File(f'../image/{r_pic}')
+    await ctx.send(file = pic_path)
+
+# 傳送網路圖片
+pic_url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ090g9KzhdPZifbHKyKMRUARuaAbrA753IPg&usqp=CAU'
+@bot.command()
+async def url_pict(ctx):
+    await ctx.send(pic_url)
+
+# 傳送Youtube網址ＸＤ
+jeff_url = 'https://youtu.be/6ZF8RXvV9sQ'
+@bot.command()
+async def Jeff(ctx):
+    await ctx.send(jeff_url)
+
 # 啟動Bot
 bot.run(os.getenv('bot_token')) 
