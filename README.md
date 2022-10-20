@@ -1,6 +1,6 @@
 # discord_bot
 
-## Discord Bot 新手上路
+## Discord Bot 2.0 新手上路
 從0開始打造自己的Discord Bot筆記
 
 ### 參考資料：
