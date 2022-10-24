@@ -6,7 +6,7 @@ import discord
 # Load .env
 load_dotenv()
 
-## 把剛剛在get_start.py中url_pict和Jeff兩個指令搬過來，避免class名稱和function相同，所以把原本的Jeff指令改成song
+## 把剛剛在get_start.py中url_pict和Jeff兩個指令搬過來
 class Jeff(commands.Cog):
     def __init__(self, bot):
         self.bot = bot

@@ -64,7 +64,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 
 ### 功能設置
 1. [基礎功能](Docs/basic.md):event（成員加入、離開等）和 command（傳送圖片等）的使用
-2. [把基礎功能寫成cog形式](Code)：沒有特別寫md檔註解都寫在code裡，主要是把不同功能拆分成不同py檔，然後可以直接在bot中load或unload不同的功能，可以自由選擇要不要用這樣的形式去寫bot～詳細的介紹可以參考[Youtube Cog介紹](https://youtu.be/KnO2-0l3BaM)和[Youtube discord 2.0 Cog實作](https://www.youtube.com/watch?v=Z__BE3sAKLU)
+2. [把基礎功能寫成cog形式](Docs/cogs.md)
 3. 連結錢包、讀取特定NFT properties加入特定頻道 - https://collabland.freshdesk.com/support/home
 4. 還沒想到.....
 
