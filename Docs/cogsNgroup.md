@@ -44,7 +44,7 @@ if __name__ == '__main__':
 <img src="../image/cogs.png" alt="Cover" width="50%"/>
 
 - 使用load和unload來確定設定成功\
-<img src="../image/cog_unload.png" alt="Cover" width="50%"/>\
+<img src="../image/cog_unload.png" alt="Cover" width="50%"/>
 <img src="../image/cog_load.png" alt="Cover" width="50%"/>
 
 
