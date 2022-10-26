@@ -13,7 +13,7 @@
 - 這邊使用兩個function，Members還有其他的功能，需要的人可以去上面Discord API members的連結看喔！
     1. `on_member_join` 當有成員加入的時候歡迎他
     2. `on_member_remove` 當有成員退出的時候跟他說掰掰
-- 去頻道按右鍵 => 複製ID，就可以設定channel ID，讓機器人傳訊息到特定的channel\
+- 去頻道按右鍵 => 複製ID，就可以設定channel ID，讓機器人傳訊息到特定的channel
 <img src="../image/copy_channel_ID.png" alt="Cover" width="50%"/>
 
 ```python
@@ -29,6 +29,7 @@ async def on_member_join(member):
 ```
 - terminal中的訊息
 <img src="../image/terminal_msg.png" alt="Cover" width="50%"/>
+
 - 到頻道去看有沒有成功讓Bot說話
 <img src="../image/channel_msg.png" alt="Cover" width="50%"/>
 
@@ -44,10 +45,10 @@ async def ping(ctx):
     await ctx.send(f'{round(bot.latency*1000,2)} (ms)')
     #bot.latency指的是延遲時間
 ```
-- 在#一般頻道中的機器人回覆\
+- 在#一般頻道中的機器人回覆
 <img src="../image/command_ping1.png" alt="Cover" width="50%"/>
 
-- 轉到#test_1頻道中，機器人也會自動回覆在#test_1中喔！\
+- 轉到#test_1頻道中，機器人也會自動回覆在#test_1中喔！
 <img src="../image/command_ping2.png" alt="Cover" width="50%"/>
 
 ## command - 傳送圖片
@@ -58,16 +59,16 @@ async def ping(ctx):
     pic_path = discord.File('../image/channel_msg.png')
     await ctx.send(file = pic_path)
 ```
-- 到頻道中試試看傳送圖片的指令\
+- 到頻道中試試看傳送圖片的指令
 <img src="../image/send_pic.png" alt="Cover" width="50%"/>
 
-- 再看看隨機傳送圖片的功能，相同的"?r_pic"指令下，傳送了不同的圖片\
+- 再看看隨機傳送圖片的功能，相同的"?r_pic"指令下，傳送了不同的圖片
 <img src="../image/send_r_pic.png" alt="Cover" width="50%"/>
 
 2. 傳送網路圖片：這邊直接google了最近超級喜歡的歌手Jeff Satur的照片網址貼在code中，他的聲音真的超～好聽，歌曲的風格我也很喜歡～私心推薦～哈哈哈！discord可以自己辨識網址傳送圖片，所以send的部分就跟文字訊息一樣就可以囉！
 <img src="../image/send_url_pic.png" alt="Cover" width="50%"/>
 
-3. 傳送網址：到這邊我突然覺得既然圖片的網址可以辨識，那Youtube的也可以吧！所以我就加上了Jeff的一首歌的Youtube網址，果然是可以辨識的，點播放還可以直接播放～好方便啊！！！ＸＤＤＤＤ\
+3. 傳送網址：到這邊我突然覺得既然圖片的網址可以辨識，那Youtube的也可以吧！所以我就加上了Jeff的一首歌的Youtube網址，果然是可以辨識的，點播放還可以直接播放～好方便啊！！！ＸＤＤＤＤ
 <img src="../image/send_y_url.png" alt="Cover" width="50%"/>
 
 Back to [README](../README.md)
