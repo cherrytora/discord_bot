@@ -72,5 +72,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 ### Final
 所有功能都建置好之後加上`bot.run('你的Bot Token')`去啟動寫好的Bot
 
+### NFT contract address
+0x041d32E7612c2b6A4cEA5c5d9cCF1A9CC87fbbde
 
 
