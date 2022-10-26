@@ -48,6 +48,27 @@ if __name__ == '__main__':
 ![](../image/cog_load.png)
 
 
-## Group & 子命令
+## Group & 子命令 [code](../Code/cmds/jeff.py)
+- 群組和子命令有一點點像上面Cog那樣，但是Cog比較像是把指令分類，每個分類下的指令都可以獨立運作。但群組需要先下群組指令後面接子命令。
+
+### Step 1. 建立群組
+- `@commands.group()`的這個function就是群組指令
+```python
+ @commands.group()
+    async def s(self,ctx):
+       pass
+```
+### Step 2. 建立子命令
+- 透過`@s.command()`來宣告命令屬於`s`這個群組
+- function的名稱就是子命令，群組指令和子命令之間以空格隔開，要啟動下面這個指令的話，要打`?s Hide`
+```python
+ @s.command()
+    async def Hide(self,ctx):
+        ## your code here
+        await #do something 
+```
+### Step 3. 檢查是否成功
+- 這樣就成功囉！
+![](../image/group.png)
 
 Back to [README](../README.md)

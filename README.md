@@ -66,7 +66,8 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 1. [基礎功能](Docs/basic.md):event（成員加入、離開等）和 command（傳送圖片等）的使用
 2. [把基礎功能寫成cog形式](Docs/cogs.md)
 3. 連結錢包、讀取特定NFT properties加入特定頻道 - https://collabland.freshdesk.com/support/home
-4. 還沒想到.....
+4. 身份組驗證
+5. 還沒想到....
 
 ### Final
 所有功能都建置好之後加上`bot.run('你的Bot Token')`去啟動寫好的Bot
