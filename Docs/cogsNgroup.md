@@ -40,12 +40,12 @@ if __name__ == '__main__':
 ```
 
 ### Step 3. 檢查是否成功
-- 利用help來看cog建立是不是成功
-![](../image/cogs.png)
+- 利用help來看cog建立是不是成功\
+<img src="../image/cogs.png" alt="Cover" width="50%"/>
 
 - 使用load和unload來確定設定成功\
-![](../image/cog_unload.png)\
-![](../image/cog_load.png)
+<img src="../image/cog_unload.png" alt="Cover" width="50%"/>\
+<img src="../image/cog_load.png" alt="Cover" width="50%"/>
 
 
 ## Group & 子命令 [code](../Code/cmds/jeff.py)
@@ -68,7 +68,7 @@ if __name__ == '__main__':
         await #do something 
 ```
 ### Step 3. 檢查是否成功
-- 這樣就成功囉！
-![](../image/group.png)
+- 這樣就成功囉！\
+<img src="../image/group.png" alt="Cover" width="50%"/>
 
 Back to [README](../README.md)

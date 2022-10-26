@@ -22,11 +22,12 @@
 ### STEP 3. Collab.Land中做身份組驗證內容設定
 
 ### STEP 4. 進入discord確認
-- Let's go -> connect wallet -> 跳到collab.land的網頁授權 -> 驗證完成（給予身份＆加入頻道）-> 可以在頻道裡發言了！
-![](../image/collabland_join.png) \
-![](../image/collanland_wallet.png) \
-![](../image/collabland_verify.png) \
-![](../image/channel_joined.png)
+- Let's go -> connect wallet -> 跳到collab.land的網頁授權 -> 驗證完成（給予身份＆加入頻道）-> 可以在頻道裡發言了！\
+<img src="../image/collabland_join.png" alt="Cover" width="50%"/>\
+<img src="../image/collanland_wallet.png" alt="Cover" width="50%"/>\
+<img src="../image/collabland_verify.png" alt="Cover" width="50%"/>\
+<img src="../image/channel_joined.png" alt="Cover" width="50%"/>
+
 
 
 
