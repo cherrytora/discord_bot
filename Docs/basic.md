@@ -46,7 +46,7 @@ async def ping(ctx):
 ```
 - 在#一般頻道中的機器人回覆 \
 <img src="../image/command_ping1.png" alt="Cover" width="50%"/>
-![]()
+
 - 轉到#test_1頻道中，機器人也會自動回覆在#test_1中喔！\
 <img src="../image/command_ping2.png" alt="Cover" width="50%"/>
 
