@@ -5,6 +5,8 @@
 ### 參考資料
 1. [Discord 身分驗證機器人 Collab.Land 設置教學](https://banka.com.tw/collab-land-setting-instruction/)
 2. [Collab.Land](https://collab.land/)
+3. [Collab.Land support](https://collabland.freshdesk.com/support/home)
+4. [VAF 錢包驗證](https://vocus.cc/article/62436057fd897800013a4bd6)
 
 參考資料1.其實寫得非常清楚，照著他的步驟做就可以完成了～但是為了避免可能哪一天連結失效(?)，所以這邊還是做個紀錄
 
