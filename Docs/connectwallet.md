@@ -16,7 +16,7 @@
 ### STEP 1. 身份組和頻道 設定
 1. 伺服器身份組設定
 
-<img src="../image/role_setting1.png" alt="Cover" width="50%"/>
+<img src="../image/role_setting1.png" alt="Cover" width="30%"/>
 <img src="../image/role_setting2.png" alt="Cover" width="50%"/>
 <img src="../image/role_setting3.png" alt="Cover" width="50%"/>
 
