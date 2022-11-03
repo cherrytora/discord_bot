@@ -61,9 +61,11 @@ async def load_cogs():
             # load 這些檔案（但是去掉".py"的字樣)
             await bot.load_extension(f'cmds.{fn[:-3]}')
 
+
 async def main():
     await load_cogs()
     await bot.start(os.getenv('bot_token'))
+
 
 if __name__ == '__main__':
     asyncio.run(main())

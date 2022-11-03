@@ -26,5 +26,11 @@ class Main(commands.Cog):
         pic_path = discord.File(f'../image/{r_pic}')
         await ctx.send(file = pic_path)
 
+    @commands.Cog.listener()
+    async def on_row_reaction_add(self,payload):
+        print(payload.emoji)
+        print(payload.member)
+
+
 async def setup(bot):
     await bot.add_cog(Main(bot))
