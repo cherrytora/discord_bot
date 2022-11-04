@@ -33,6 +33,7 @@ class Jeff(commands.Cog):
     async def Hide(self,ctx):
         embed=discord.Embed(title="Jeff Satur - แค่เงา (Hide)【Official Music Video】", url="https://www.youtube.com/watch?v=k9aI7dHj8GM", color=0x0eacfb)
         embed.set_thumbnail(url="https://i.ytimg.com/vi/k9aI7dHj8GM/sddefault.jpg")
+        embed.set_footer(text=" My Prince Charming")
         await ctx.send(embed=embed)
     
     @s.command()

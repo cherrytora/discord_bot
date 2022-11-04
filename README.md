@@ -64,10 +64,17 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 
 ### 功能設置
 1. [基礎功能](Docs/basic.md):event（成員加入、離開等）和 command（傳送圖片等）的使用
-2. [把基礎功能寫成cog形式＆群組命令](./Docs/cogsNgroup.md)
+2. [把基礎功能寫成cog形式 & 群組命令](./Docs/cogsNgroup.md) 
 3. [連結錢包、讀取特定NFT properties加入特定頻道](./Docs/connectwallet.md)
-4. 身份組驗證
-5. 還沒想到....
+4. [點選表情符號加入身份組 & 錯誤處理 ](./Code/cmds/event.py)
+5. 按鈕連結設定：https://youtu.be/f-TK7EcWbUY
+6. 還沒想到...(也許音樂機器人？)
+
+embed: 
+https://www.youtube.com/watch?v=wlMCDXf2b4E
+https://discohook.org/
+https://www.youtube.com/watch?v=4j-zqrcVtJ8
+
 
 ### Final
 所有功能都建置好之後加上`bot.run('你的Bot Token')`去啟動寫好的Bot

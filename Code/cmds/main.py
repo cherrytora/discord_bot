@@ -31,6 +31,13 @@ class Main(commands.Cog):
         print(payload.emoji)
         print(payload.member)
 
+    @commands.command()
+    async def cmdA(self,ctx, num:int):
+        await ctx.send(num)
+
+    # @cmdA.error
+    # async def cmdA_error(self, ctx, error):
+    #     await ctx.send(error)
 
 async def setup(bot):
     await bot.add_cog(Main(bot))
