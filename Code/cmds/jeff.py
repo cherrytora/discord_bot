@@ -1,10 +1,7 @@
 from discord.ext import commands
-import os 
-from dotenv import load_dotenv
 import discord
+from discord.ui import Button, View
 
-# Load .env
-load_dotenv()
 
 ## 把剛剛在get_start.py中url_pict和Jeff兩個指令搬過來
 class Jeff(commands.Cog):
@@ -47,9 +44,6 @@ class Jeff(commands.Cog):
         embed=discord.Embed(title="Jeff Satur - Why Don't You Stay (WorldTour Ver.)[Official MV]", url="https://youtu.be/6ZF8RXvV9sQ", color=0x0eacfb)
         embed.set_thumbnail(url="https://i.ytimg.com/vi/6ZF8RXvV9sQ/sddefault.jpg")
         await ctx.send(embed=embed)
-        
-    # # 來建立一個Jeff播放清單，讓使用者可以自行選擇歌曲
-    # # 用youtube api去更新他的播放清單ＸＤ
 
 async def setup(bot):
    await bot.add_cog(Jeff(bot))

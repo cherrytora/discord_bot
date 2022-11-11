@@ -20,6 +20,11 @@ class Event(commands.Cog):
     #    print(reaction)
     #    print(user)
 
+    """
+    on_reaction_add 和 on_raw_reaction_add 的差別
+    on_reaction_add當Bot關掉之後資料就會清空，再新增reaction就不會有反應
+    on_raw_reaction_add在Bot關掉之後也不會被清空，重啟Bot之後reaction還是會有反應
+    """
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         # print(payload)
@@ -31,11 +36,10 @@ class Event(commands.Cog):
             role = guild.get_role(int(os.getenv('role_id'))) # 身份組 = 伺服器.身份組id(身份組id直接去身份組複製)=>型態int
             await payload.member.add_roles(role) # 將成員加入身份組
 
-
     '''
     例外處理
     '''
-    # 全域指令的錯誤處理
+    ## 全域指令的錯誤處理
     @commands.Cog.listener()
     async def on_command_error(self, ctx, error):
         '''
@@ -50,7 +54,7 @@ class Event(commands.Cog):
             '''
             await ctx.send("沒有這個指令！")
         else:
-            await ctx.send("發生錯誤惹！")
+            await ctx.send(error)
 
 async def setup(bot):
     await bot.add_cog(Event(bot))
