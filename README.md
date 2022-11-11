@@ -67,7 +67,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 2. [把基礎功能寫成cog形式 & 群組命令](./Docs/cogsNgroup.md) 
 3. [連結錢包、讀取特定NFT properties加入特定頻道](./Docs/connectwallet.md)
 4. [點選表情符號加入身份組 & 錯誤處理 ](./Code/cmds/event.py)
-5. 按鈕連結設定：https://youtu.be/f-TK7EcWbUY
+5. [Embeds & 按鈕連結設定](./Docs/reaction_button.md)
 6. 還沒想到...(也許音樂機器人？)
 
 embed: 
