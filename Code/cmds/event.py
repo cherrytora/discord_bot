@@ -39,7 +39,7 @@ class Event(commands.Cog):
 
     @commands.Cog.listener()
     async def on_raw_reaction_remove(self, payload):
-        # 判斷新增的貼圖 == 指定的貼圖 => 移除相對應的Role（身份組）
+        # 判斷移除的貼圖 == 指定的貼圖 => 移除相對應的Role（身份組）
         if payload.emoji.name == '👀' and payload.message_id == 1041740726976913409:
             guild = self.bot.get_guild(payload.guild_id)
             user = guild.get_member(payload.user_id) # 取得成員user_id
