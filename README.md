@@ -68,7 +68,7 @@ bot = commands.Bot(command_prefix="?", intents=intents)
 3. [連結錢包、讀取特定NFT properties加入特定頻道](./Docs/connectwallet.md)
 4. [點選表情符號加入身份組 & 移除表情符號移除身份組 & 錯誤處理 ](./Code/cmds/event.py)
 5. [Embeds & 按鈕連結設定](./Docs/reaction_button.md)
-6. 還沒想到...(也許音樂機器人？)
+6. [音樂機器人](./Code/cmds/music.py)
 
 embed: 
 https://www.youtube.com/watch?v=wlMCDXf2b4E
