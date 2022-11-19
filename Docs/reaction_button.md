@@ -22,3 +22,8 @@
 
 https://user-images.githubusercontent.com/45777647/201389899-34fe67f7-2d9b-4b36-a05c-cdebb800419f.mp4
 
+
+然後我就把他做成Music Bot了～哈哈哈哈！
+
+https://user-images.githubusercontent.com/45777647/202845325-f4cb28c2-18af-4903-8345-f25780b2ee46.mp4
+
