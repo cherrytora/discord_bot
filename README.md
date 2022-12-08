@@ -13,7 +13,7 @@
 7. [discordpy documentation](https://discordpy.readthedocs.io/en/latest/index.html#getting-started)
 
 ### 主題
-1. [基本設定 & 基礎功能](Docs/basic.md):event（成員加入、離開等）和 command（傳送圖片等）的使用
+1. [基本設定 & 基礎功能](Docs/basic.md)：event（成員加入、離開等）和 command（傳送圖片等）的使用
 2. [把基礎功能寫成cog形式 & 群組命令 => discord 2.0](./Docs/cogs_group.md) 
 3. [連結錢包、讀取特定NFT properties加入特定頻道](./Docs/connectwallet.md)
 4. [點選表情符號加入身份組 & 移除表情符號移除身份組 & 錯誤處理 ](./Code/cmds/event.py)
