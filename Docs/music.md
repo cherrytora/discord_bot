@@ -68,7 +68,7 @@ def next(self, ctx, play_list):
         asyncio.run_coroutine_threadsafe(ctx.send(f'正在播放 📣 {info["title"]} 📣'),self.bot.loop)  
 ```
     info回傳一個字典，keys如下，音檔的key是url
-    ![](../image/api_keys.png)
+![](../image/api_keys.png)
 
 - 隨機播放的指令
 ```python
