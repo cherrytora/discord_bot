@@ -53,7 +53,7 @@ async def stop(self, ctx):
     await ctx.send('Music Stop')
 ```
 5. 隨機播放：先寫一個播放設定的function，然後把這個function放到隨機播放的指令裡面
-    -  播放設定function
+-  播放設定function
 ```python
 def next(self, ctx, play_list):
         # 隨機產生數字
@@ -67,9 +67,10 @@ def next(self, ctx, play_list):
         # ctx.send一定要await，所以用asyncio來啟動他
         asyncio.run_coroutine_threadsafe(ctx.send(f'正在播放 📣 {info["title"]} 📣'),self.bot.loop)  
 ```
-info回傳一個字典，keys如下，音檔的key是url
-![](../image/api_keys.png)
-    - 隨機播放的指令
+    info回傳一個字典，keys如下，音檔的key是url
+    ![](../image/api_keys.png)
+
+- 隨機播放的指令
 ```python
 @commands.command()
 async def rplay(self,ctx):
