@@ -36,7 +36,7 @@ class Music(commands.Cog):
     播放的歌曲隨機選取
     '''
     def next(self, ctx, play_list):
-        # 隨機產生0~9的數（因為目前list裡有10首歌）
+        # 隨機產生數字
         num = random.randint(0,len(play_list)-1)
         # YoutubeDL設定
         YDL_OPTIONS = {'format': 'bestaudio'}

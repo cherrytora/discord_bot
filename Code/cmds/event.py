@@ -15,16 +15,7 @@ class Event(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print(f"Reaction ready.")
-    # @commands.Cog.listener()
-    # async def on_reaction_add(self, reaction, user):
-    #    print(reaction)
-    #    print(user)
-
-    """
-    on_reaction_add 和 on_raw_reaction_add 的差別
-    on_reaction_add當Bot關掉之後資料就會清空，再新增reaction就不會有反應
-    on_raw_reaction_add在Bot關掉之後也不會被清空，重啟Bot之後reaction還是會有反應
-    """
+  
     @commands.Cog.listener()
     async def on_raw_reaction_add(self, payload):
         # print(payload)
