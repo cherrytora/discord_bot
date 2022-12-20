@@ -42,11 +42,56 @@ class Music(commands.Cog):
         YDL_OPTIONS = {'format': 'bestaudio'}
         url = f'https://www.youtube.com/watch?v={play_list[num]}'
         info = YoutubeDL(YDL_OPTIONS).extract_info(url, download=False)
-        # url是audio link的key
+        ## url是audio link的key
+        # ctx.voice_client.play(discord.FFmpegPCMAudio(info['url']), after = lambda e: self.next(ctx, play_list))
+        ## ctx.send一定要await，所以要用asyncio來啟動他
+        # asyncio.run_coroutine_threadsafe(ctx.send(f'正在播放 📣 {info["title"]} 📣'),self.bot.loop)
+        button1 = Button(label="下一首", style=discord.ButtonStyle.primary, emoji="⏭")
+        button2 = Button(label="暫停播放", style=discord.ButtonStyle.primary, emoji="⏸")
+        button3 = Button(label="繼續播放", style=discord.ButtonStyle.primary, emoji="▶")
+        button4 = Button(label="停止播放", style=discord.ButtonStyle.primary, emoji="⏹")
+        button1.callback = self.set_skip
+        button2.callback = self.set_pause
+        button3.callback = self.set_resume
+        button4.callback = self.set_stop
+        view = View()
+        view.add_item(button1) 
+        view.add_item(button2)
+        view.add_item(button3)
+        view.add_item(button4)
         ctx.voice_client.play(discord.FFmpegPCMAudio(info['url']), after = lambda e: self.next(ctx, play_list))
-        # ctx.send一定要await，所以要用asyncio來啟動他
-        asyncio.run_coroutine_threadsafe(ctx.send(f'正在播放 📣 {info["title"]} 📣'),self.bot.loop)  
+        asyncio.run_coroutine_threadsafe(ctx.send(f'正在播放 📣 {info["title"]} 📣', view=view),self.bot.loop)
 
+
+    ### Button reactions ###
+    async def set_skip(self, interaction: discord.Interaction):
+        guild = interaction.guild
+        guild.voice_client.stop()
+        self.rplay()
+        # self.mv_l = self.load_list()
+        # self.next(guild, self.mv_l) #會交互失敗
+        await interaction.response.send_message('Next Song')
+    
+    async def set_pause(self, interaction: discord.Interaction):
+        guild = interaction.guild
+        self.mv_l.clear()
+        guild.voice_client.pause()
+        await interaction.response.send_message('Music Pause')
+
+    async def set_resume(self, interaction: discord.Interaction):
+        guild = interaction.guild
+        self.mv_l.clear()
+        guild.voice_client.resume()
+        await interaction.response.send_message('Music Resume')
+
+    async def set_stop(self, interaction: discord.Interaction):
+            guild = interaction.guild
+            self.mv_l.clear()
+            guild.voice_client.stop()
+            await interaction.response.send_message('Music Stop')
+
+
+    ### Commands ###
     # 讓機器人加入語音頻道
     @commands.command()
     async def join(self,ctx):
@@ -58,6 +103,18 @@ class Music(commands.Cog):
     async def leave(self,ctx):
         await ctx.voice_client.disconnect()
 
+    # 暫停播放
+    @commands.command()
+    async def pause(self, ctx):
+        ctx.voice_client.pause()
+        await ctx.send('Music Pause')
+
+    # 重新播放
+    @commands.command()
+    async def resume(self, ctx):
+        ctx.voice_client.resume()
+        await ctx.send('Music Replaying')
+
     # 停止播放
     @commands.command()
     async def stop(self, ctx):
@@ -65,14 +122,36 @@ class Music(commands.Cog):
         ctx.voice_client.stop()
         await ctx.send('Music Stop')
 
+    # 跳過
+    @commands.command()
+    async def skip(self, ctx):
+        ctx.voice_client.stop()
+        # self.mv_l.clear()
+        # self.mv_l = self.load_list()
+        # self.next(ctx, self.mv_l)
+
     # 開始隨機播放
     @commands.command()
     async def rplay(self,ctx):
-        if ctx.channel.name == "test_1": # 設定頻道在test_1才可以有播音樂的功能
-            self.mv_l = self.load_list()
-            self.next(ctx, self.mv_l)
+        # 如果沒有在播放就開始播放音樂，如果已經在播放的話就提示'Music Playing'
+        # voice = discord.utils.get(self.bot.voice_clients, guild=ctx.guild)
+        if not ctx.voice_client.is_playing():
+            if ctx.channel.name == "test_1": # 設定頻道在test_1才可以有播音樂的功能
+                self.mv_l = self.load_list()
+                self.next(ctx, self.mv_l)
+                # button4 = Button(label="停止播放", style=discord.ButtonStyle.primary, emoji="⏹")
+                # button4.callback = self.set_skip
+                # view = View()
+                # view.add_item(button4)
+                # await ctx.send(view=view)
+            else:
+                await ctx.send('在test_1頻道才可以播音樂喔～')
         else:
-            await ctx.send('在test_1頻道才可以播音樂喔～')
+            await ctx.send('Music Playing')
+
+
+    
+
         '''
         ctx.guild:str => 伺服器名稱
         ctx.channel.name:str => 頻道名稱 ctx.channel不是str喔！但我也不知道實際的型態是什麼，總之要加上name才會是True

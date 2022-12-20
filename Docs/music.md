@@ -5,6 +5,7 @@
 3. [【Proladon】Code a discord bot - EP13 Part2 - 開源 MusicBot](https://www.youtube.com/watch?v=PaaH_vs_56U&list=PLSCgthA1Anif1w6mKM3O6xlBGGypXtrtN&index=22)
 4. [YouTubeDL](https://github.com/ytdl-org/youtube-dl#installation)
 5. [pawel02/image_bot](https://github.com/pawel02/image_bot/blob/main/music_cog.py)
+6. [How to add Buttons to your command](https://dev.to/jimmyblue/how-to-add-buttons-to-your-command-interactionspy-1jdh)
 
 ## 基本設定
 - music bot會用到兩個套件，第一個是YouTubeDL，可以去讀取youtube上的影片。第二個是ffmpeg，用來把youtube影片轉成音樂在語音頻道播放，這個套件在discord可以直接調用，在開始寫code之前先裝好喔～
